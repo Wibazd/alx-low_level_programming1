@@ -13,7 +13,7 @@ long l = 59;
 long fd = 1;
 long syscall = 1;
 long ret = 0;
-_asm_ ("syscall"
+__asm__ ("syscall"
 : "=a" (ret)
 : "a" (syscall),
 "D" (fd),
