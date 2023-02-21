@@ -1,34 +1,49 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - main block
- * Description: Print the first 50 fibonacci numbers, starting with 1 and 2.
- * Numbers must be coma and space separated.
- * Return: 0
+ * print_times_table - Print the `n` times table, starting with 0.
+ * Description: If `n` is greater than 15 or less than 0, print nothing.
+ * @n: int type number
  */
-int main(void)
+void print_times_table(int n)
 {
-	int count = 2;
-	long int i = 1, j = 2;
-	long int k;
+	int x = 0, y, z;
 
-	printf("%lu, ", i);
-	while (count <= 50)
+	if (n > 15 || n < 0)
+		return;
+	while (x <= n)
 	{
-		if (count == 50)
+		for (y = 0; y <= n; y++)
 		{
-			printf("%lu\n", j);
-		}
-		else
-		{
-			printf("%lu, ", j);
-		}
+			z = x * y;
+			if (z > 99)
+			{
+				_putchar(z / 100 + '0');
+				_putchar((z / 10 % 10) + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+			else
+				_putchar(z + '0');
 
-		k = j;
-		j += i;
-		i = k;
-		count++;
+			if (y != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+		_putchar('\n');
+		x++;
 	}
-
-	return (0);
 }
