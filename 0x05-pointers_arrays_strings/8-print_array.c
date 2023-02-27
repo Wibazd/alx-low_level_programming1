@@ -7,7 +7,6 @@
 * @n: integer
 * Return: array
 **/
-
 void print_array(int *a, int n)
 {
 	int i;
@@ -23,4 +22,4 @@ void print_array(int *a, int n)
 			printf("%d", a[i]);
 		}
 	}
-	printf("\n");
+	printf("\n");		
