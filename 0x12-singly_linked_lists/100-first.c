@@ -1,5 +1,4 @@
-global	main
-
+		global	main
 		section	.text
 main:	mov	rax, 1
 		mov	rdi, 1
@@ -10,5 +9,5 @@ main:	mov	rax, 1
 		xor	rdi, rdi
 		syscall
 
-		section	.data
+				section	.data
 holberton:db	"Hello, Holberton", 10
