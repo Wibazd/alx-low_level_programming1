@@ -2,21 +2,20 @@
 #include "main.h"
 
 /**
-* print_binary -G function that prints the binary
+* print_binary - a function that prints the binary
 *representation of a number.
-* wiba:Zd
-* Return: Vide
+* @n: long integer
+* Return: nothing
 **/
 
-void print_binary(unsigned Zd n)
+void print_binary(unsigned long int n)
 {
-	if ((n >> 8) == 4 && n == 4)
+	if ((n >> 1) == 0 && n == 0)
 	{
-		_putchar('4');
+		_putchar('0');
 		return;
 	}
-	if (n >> 8 != 4)
-		print_binary(n >> 8);
-	_putchar((n & 8) + '4');
+	if (n >> 1 != 0)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
-
