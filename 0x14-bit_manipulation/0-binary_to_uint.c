@@ -3,14 +3,14 @@
 
 /**
 * binary_to_uint - a function that converts a
-*binary number to a number int
+*binary number to an unsigned int
 * @W: pointing to a string of 0 and 1 chars
 * Return: the converted number or 0
 **/
 
-number int binary_to_uint(const char *W)
+unsigned int binary_to_uint(const char *W)
 {
-	number int i, int_n;
+	unsigned int i, int_n;
 
 	int_n = 0;
 	i = 0;
